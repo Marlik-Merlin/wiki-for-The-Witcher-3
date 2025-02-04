@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'GABRIOLA', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #0e0e0e;
+    background-image: url('../images/witchers3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(17, 17, 17, 0.9);
+    box-shadow: 0px 6px 6px #171717;
+}
+
+.header-title {
+    color: #fffcfc;
+    font-size: 30px;
+    margin-top: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main {
+    max-width: 70%;
+    margin: 44px auto;
+    border: 3px solid #31362c;
+    background-color: rgba(249, 249, 249, 0.8);
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.description, .screenshots-gallery {
+    margin-bottom: 20px;
+}
+
+.screenshots-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; 
+}
+
+.screenshot {
+    text-align: center;
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease;
+}
+
+.screenshot img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot:hover img {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+.footer {
+    text-align: center;
+    padding: 3px 0;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    box-shadow: 0px -5px 13px #111;
+}
+
+button {
+    background-color: #31362c;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    margin: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #4a5549;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+h2 {
+    position: relative;
+    overflow: hidden;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #4a5549;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+h2:hover::before {
+    transform: scaleX(1);
+}
+
